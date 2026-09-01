@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultados</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Encabezado Semántico -->
+  <header class="header-principal">
+    <div class="logo-contenedor">
+      <img src="premier.webp" alt="Logo Premier League" class="icono-logo">
+      <h1 class="logo">Resultados</h1>
+    </div>
+    <nav class="navegacion">
+      <a href="#seccion-partidos" class="enlace">Ver Partidos</a>
+      <a href="#seccion-formulario" class="enlace">Registrar Marcador</a>
+    </nav>
+  </header>
+
+  <main class="contenedor-principal">
+    
+    <!-- Banner Superior (Manchester United) -->
+    <figure class="banner">
+      <img src="Manchester.jpg" alt="Estadio Manchester United" class="imagen-banner">
+    </figure>
+
+    <!-- Sección Formulario -->
+    <section id="seccion-formulario" class="tarjeta-seccion">
+      <h2>Registrar Nuevo Marcador</h2>
+      
+      <form id="form-marcador" class="formulario">
+        <!-- Campo 1: Text -->
+        <div class="campo">
+          <label for="equipo-local">Equipo Local:</label>
+          <input type="text" id="equipo-local" placeholder="Ej: Arsenal" required>
+        </div>
+
+        <!-- Campo 2: Number -->
+        <div class="campo">
+          <label for="goles-local">Goles Local:</label>
+          <input type="number" id="goles-local" min="0" placeholder="0" required>
+        </div>
+
+        <div class="campo">
+          <label for="equipo-visitante">Equipo Visitante:</label>
+          <input type="text" id="equipo-visitante" placeholder="Ej: Chelsea" required>
+        </div>
+
+        <div class="campo">
+          <label for="goles-visitante">Goles Visitante:</label>
+          <input type="number" id="goles-visitante" min="0" placeholder="0" required>
+        </div>
+
+        <!-- Campo 3: Date (Añadido para cumplir el requisito de 4 tipos de campos) -->
+        <div class="campo">
+          <label for="fecha-partido">Fecha del Partido:</label>
+          <input type="date" id="fecha-partido" required>
+        </div>
+
+        <!-- Campo 4: Select -->
+        <div class="campo">
+          <label for="categoria">Categoría:</label>
+          <select id="categoria" required>
+            <option value="">Seleccione una categoría</option>
+            <option value="Oficial">Oficial</option>
+            <option value="Amistoso">Amistoso</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-guardar">Guardar Partido</button>
+      </form>
+    </section>
+
+    <!-- Sección Lista de Partidos -->
+    <section id="seccion-partidos" class="tarjeta-seccion">
+      <h2>Partidos Registrados</h2>
+      <div id="contenedor-partidos" class="grid-partidos"></div>
+    </section>
+
+    <!-- Banner Inferior (Nottingham Forest) -->
+  <figure class="banner">
+  <img src="elforest.jpg" alt="Nottingham Forest FC" class="imagen-banner">
+</figure>
+
+  </main>
+
+  <!-- Pie de página con el año dinámico -->
+  <footer class="footer-principal">
+    <p>&copy; <span id="year-actual"></span></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
