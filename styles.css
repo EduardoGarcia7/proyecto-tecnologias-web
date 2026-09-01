@@ -1,0 +1,151 @@
+:root {
+  --color-principal: #0b6635;
+  --color-secundario: #084c27;
+  --color-fondo: #f4f6f8;
+  --color-tarjeta: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: #333;
+}
+
+.header-principal {
+  background-color: var(--color-principal);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.logo-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icono-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.navegacion .enlace {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navegacion .enlace:hover {
+  text-decoration: underline;
+  color: #d1e7dd;
+}
+
+.contenedor-principal {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.imagen-banner {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.tarjeta-seccion {
+  background: var(--color-tarjeta);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+}
+
+.tarjeta-seccion h2 {
+  color: var(--color-principal);
+  margin-bottom: 15px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.campo label {
+  font-weight: bold;
+}
+
+.campo input, .campo select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn-guardar {
+  background-color: var(--color-principal);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-guardar:hover {
+  background-color: var(--color-secundario);
+}
+
+.grid-partidos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tarjeta-partido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background-color: #eef2f5;
+  border-left: 5px solid var(--color-principal);
+  border-radius: 4px;
+}
+
+.footer-principal {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+  .header-principal {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .tarjeta-partido {
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+  }
+}
